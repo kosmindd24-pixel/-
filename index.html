@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопросы о разработке ПО</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a69bd);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .accordion {
+            padding: 20px;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+        
+        .accordion-header {
+            background: #4a69bd;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        .accordion-header:hover {
+            background: #3c5aa8;
+        }
+        
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.2rem;
+        }
+        
+        .accordion-header.active::after {
+            content: '-';
+        }
+        
+        .accordion-content {
+            background: #f8f9fa;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .accordion-content p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background-color: #fff8e1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .accordion-header {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Разработка программного обеспечения</h1>
+            <p class="subtitle">Ответы на ключевые вопросы о процессе создания ПО</p>
+        </header>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">1. Почему идеология проб и ошибок так глубоко проникла в разработку ПО?</div>
+                <div class="accordion-content">
+                    <p>Идеология проб и ошибок глубоко проникла в разработку ПО по нескольким причинам. Во-первых, программное обеспечение по своей природе сложно и многогранно, что делает практически невозможным предсказать все возможные сценарии использования и проблемы на этапе проектирования. Во-вторых, быстрые изменения технологий и требований пользователей вынуждают разработчиков использовать итеративный подход. Кроме того, такой подход позволяет быстро получать обратную связь от пользователей и вносить корректировки, что в конечном итоге приводит к созданию более качественного продукта, отвечающего реальным потребностям.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">2. Какие ограничения ведут к тому, что называется «смертельным маршем»?</div>
+                <div class="accordion-content">
+                    <p>"Смертельный марш" в разработке ПО обычно вызывается сочетанием следующих ограничений и факторов:</p>
+                    <p>- <span class="highlight">Нереалистичные сроки</span>: Установление крайне сжатых сроков без учета реальной сложности проекта</p>
+                    <p>- <span class="highlight">Недостаток ресурсов</span>: Ограниченное количество разработчиков или их низкая квалификация</p>
+                    <p>- <span class="highlight">Постоянно меняющиеся требования</span>: Частые изменения в спецификациях без корректировки сроков</p>
+                    <p>- <span class="highlight">Плохое планирование</span>: Неадекватная оценка сложности задач и рисков</p>
+                    <p>- <span class="highlight">Давление руководства</span>: Жесткие требования к выполнению планов без учета человеческого фактора</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">3. С чем связаны неудачи при разработке ПО?</div>
+                <div class="accordion-content">
+                    <p>Неудачи при разработке ПО связаны с множеством факторов, среди которых наиболее распространены:</p>
+                    <p>- <span class="highlight">Нечеткие или постоянно меняющиеся требования</span></p>
+                    <p>- <span class="highlight">Неадекватное планирование и оценка сроков</span></p>
+                    <p>- <span class="highlight">Недостаточное тестирование и контроль качества</span></p>
+                    <p>- <span class="highlight">Плохая коммуникация в команде и с заказчиком</span></p>
+                    <p>- <span class="highlight">Технические долги и неправильный выбор технологий</span></p>
+                    <p>- <span class="highlight">Нехватка квалифицированных кадров или их высокая текучесть</span></p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">4. Чем является разработка ПО?</div>
+                <div class="accordion-content">
+                    <p>Разработка программного обеспечения — это многогранный процесс, который включает в себя:</p>
+                    <p>- <span class="highlight">Инженерную дисциплину</span>: Применение систематического, дисциплинированного и измеримого подхода к созданию ПО</p>
+                    <p>- <span class="highlight">Творческий процесс</span>: Создание уникальных решений для конкретных проблем</p>
+                    <p>- <span class="highlight">Командную работу</span>: Совместные усилия различных специалистов</p>
+                    <p>- <span class="highlight">Управление проектами</span>: Планирование, организация и контроль ресурсов</p>
+                    <p>- <span class="highlight">Постоянное обучение</span>: Непрерывное освоение новых технологий и методологий</p>
+                    <p>В широком смысле, разработка ПО — это процесс преобразования потребностей пользователей в программные инструкции, которые компьютер может выполнить для достижения desired результата.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">5. Что является чертежом ПО?</div>
+                <div class="accordion-content">
+                    <p>В разработке ПО нет единого аналога традиционного чертежа, как в инженерии. Вместо этого используется совокупность артефактов, которые выполняют роль "чертежей":</p>
+                    <p>- <span class="highlight">Техническое задание и спецификации требований</span>: Описывают, что должна делать система</p>
+                    <p>- <span class="highlight">Архитектурные диаграммы</span>: Показывают высокоуровневую структуру системы</p>
+                    <p>- <span class="highlight">Диаграммы UML</span>: Визуализируют различные аспекты системы</p>
+                    <p>- <span class="highlight">ER-диаграммы</span>: Описывают структуру базы данных</p>
+                    <p>- <span class="highlight">Блок-схемы алгоритмов</span>: Визуализируют логику выполнения программ</p>
+                    <p>- <span class="highlight">Прототипы интерфейсов</span>: Показывают визуальную составляющую</p>
+                    <p>- <span class="highlight">Исходный код</span>: Сам код с комментариями часто рассматривается как исполняемый чертеж системы</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Ответы на вопросы о разработке ПО</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
